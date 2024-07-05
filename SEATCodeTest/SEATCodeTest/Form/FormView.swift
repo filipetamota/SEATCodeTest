@@ -67,7 +67,8 @@ struct FormView: View {
                         if
                             !firstname.isEmpty,
                             !lastname.isEmpty,
-                            Utils.isEmailValid(email: email),
+                            (phone.isEmpty || Utils.isValidPhone(phone: phone)),
+                            Utils.isValidEmail(email: email),
                             !issueDescription.isEmpty
                         {
                             let issue = Issue(firstName: firstname, lastName: lastname, email: email, phone: phone, date: date, issueDescription: issueDescription)

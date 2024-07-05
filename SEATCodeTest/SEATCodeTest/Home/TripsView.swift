@@ -33,7 +33,7 @@ struct TripsView: View {
                         }) {
                             TripsTableRowView(tripResult: tripResult)
                         }
-                        .listRowBackground(selectedTrip?.tripId == tripResult.tripId ? Color.gray : Color.white)
+                        .listRowBackground(selectedTrip?.tripId == tripResult.tripId ? Color(UIColor.lightGray) : Color.white)
                     }
                 }
                 .listStyle(.plain)
