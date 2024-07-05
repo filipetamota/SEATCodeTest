@@ -19,15 +19,16 @@
 		D4DFCE832C358E3C001ADF42 /* APIInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4DFCE822C358E3C001ADF42 /* APIInfo.plist */; };
 		D4DFCE862C358E80001ADF42 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFCE852C358E80001ADF42 /* LoadingIndicatorView.swift */; };
 		D4DFCE892C358F04001ADF42 /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = D4DFCE882C358F04001ADF42 /* Polyline */; };
-		D4DFCE8D2C358F67001ADF42 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFCE8C2C358F67001ADF42 /* HomeTableView.swift */; };
-		D4DFCE8F2C358F70001ADF42 /* HomeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFCE8E2C358F70001ADF42 /* HomeRowView.swift */; };
+		D4DFCE8D2C358F67001ADF42 /* TripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFCE8C2C358F67001ADF42 /* TripsView.swift */; };
+		D4DFCE8F2C358F70001ADF42 /* TripsTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFCE8E2C358F70001ADF42 /* TripsTableRowView.swift */; };
 		D4DFCE912C358F80001ADF42 /* TripsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFCE902C358F80001ADF42 /* TripsViewModel.swift */; };
-		D4DFCE932C358FD7001ADF42 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFCE922C358FD7001ADF42 /* DetailView.swift */; };
-		D4DFCE952C358FE9001ADF42 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFCE942C358FE9001ADF42 /* DetailViewModel.swift */; };
+		D4DFCE932C358FD7001ADF42 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFCE922C358FD7001ADF42 /* FormView.swift */; };
+		D4DFCE952C358FE9001ADF42 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFCE942C358FE9001ADF42 /* Issue.swift */; };
 		D4DFCE972C359380001ADF42 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFCE962C359380001ADF42 /* Utils.swift */; };
 		D4DFCE9A2C36DC30001ADF42 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFCE992C36DC30001ADF42 /* View.swift */; };
 		D4DFCE9E2C370EF0001ADF42 /* TripsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFCE9D2C370EF0001ADF42 /* TripsModel.swift */; };
 		D4DFCEA02C370F2E001ADF42 /* StopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFCE9F2C370F2E001ADF42 /* StopModel.swift */; };
+		D4DFCEA22C3824F4001ADF42 /* BadgeNumberProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFCEA12C3824F4001ADF42 /* BadgeNumberProvidable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,15 +63,16 @@
 		D4DFCE802C358E21001ADF42 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		D4DFCE822C358E3C001ADF42 /* APIInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIInfo.plist; sourceTree = "<group>"; };
 		D4DFCE852C358E80001ADF42 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
-		D4DFCE8C2C358F67001ADF42 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
-		D4DFCE8E2C358F70001ADF42 /* HomeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRowView.swift; sourceTree = "<group>"; };
+		D4DFCE8C2C358F67001ADF42 /* TripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsView.swift; sourceTree = "<group>"; };
+		D4DFCE8E2C358F70001ADF42 /* TripsTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableRowView.swift; sourceTree = "<group>"; };
 		D4DFCE902C358F80001ADF42 /* TripsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewModel.swift; sourceTree = "<group>"; };
-		D4DFCE922C358FD7001ADF42 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		D4DFCE942C358FE9001ADF42 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		D4DFCE922C358FD7001ADF42 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		D4DFCE942C358FE9001ADF42 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		D4DFCE962C359380001ADF42 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D4DFCE992C36DC30001ADF42 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		D4DFCE9D2C370EF0001ADF42 /* TripsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsModel.swift; sourceTree = "<group>"; };
 		D4DFCE9F2C370F2E001ADF42 /* StopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopModel.swift; sourceTree = "<group>"; };
+		D4DFCEA12C3824F4001ADF42 /* BadgeNumberProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeNumberProvidable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +126,7 @@
 			children = (
 				D4DFCE7A2C358D4A001ADF42 /* APIClient */,
 				D4DFCE8A2C358F24001ADF42 /* Home */,
-				D4DFCE8B2C358F41001ADF42 /* Detail */,
+				D4DFCE8B2C358F41001ADF42 /* Form */,
 				D4DFCE7D2C358DD7001ADF42 /* Resources */,
 				D4DFCE982C36DC18001ADF42 /* Extensions */,
 				D4DFCE842C358E6F001ADF42 /* Utils */,
@@ -198,6 +200,7 @@
 			children = (
 				D4DFCE852C358E80001ADF42 /* LoadingIndicatorView.swift */,
 				D4DFCE962C359380001ADF42 /* Utils.swift */,
+				D4DFCEA12C3824F4001ADF42 /* BadgeNumberProvidable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -206,8 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				D4DFCE522C358C83001ADF42 /* ContentView.swift */,
-				D4DFCE8C2C358F67001ADF42 /* HomeTableView.swift */,
-				D4DFCE8E2C358F70001ADF42 /* HomeRowView.swift */,
+				D4DFCE8C2C358F67001ADF42 /* TripsView.swift */,
+				D4DFCE8E2C358F70001ADF42 /* TripsTableRowView.swift */,
 				D4DFCE902C358F80001ADF42 /* TripsViewModel.swift */,
 				D4DFCE9D2C370EF0001ADF42 /* TripsModel.swift */,
 				D4DFCE9F2C370F2E001ADF42 /* StopModel.swift */,
@@ -215,13 +218,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		D4DFCE8B2C358F41001ADF42 /* Detail */ = {
+		D4DFCE8B2C358F41001ADF42 /* Form */ = {
 			isa = PBXGroup;
 			children = (
-				D4DFCE922C358FD7001ADF42 /* DetailView.swift */,
-				D4DFCE942C358FE9001ADF42 /* DetailViewModel.swift */,
+				D4DFCE922C358FD7001ADF42 /* FormView.swift */,
+				D4DFCE942C358FE9001ADF42 /* Issue.swift */,
 			);
-			path = Detail;
+			path = Form;
 			sourceTree = "<group>";
 		};
 		D4DFCE982C36DC18001ADF42 /* Extensions */ = {
@@ -371,13 +374,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4DFCE532C358C83001ADF42 /* ContentView.swift in Sources */,
-				D4DFCE932C358FD7001ADF42 /* DetailView.swift in Sources */,
-				D4DFCE8D2C358F67001ADF42 /* HomeTableView.swift in Sources */,
+				D4DFCE932C358FD7001ADF42 /* FormView.swift in Sources */,
+				D4DFCE8D2C358F67001ADF42 /* TripsView.swift in Sources */,
 				D4DFCE9E2C370EF0001ADF42 /* TripsModel.swift in Sources */,
 				D4DFCE912C358F80001ADF42 /* TripsViewModel.swift in Sources */,
-				D4DFCE952C358FE9001ADF42 /* DetailViewModel.swift in Sources */,
+				D4DFCE952C358FE9001ADF42 /* Issue.swift in Sources */,
+				D4DFCEA22C3824F4001ADF42 /* BadgeNumberProvidable.swift in Sources */,
 				D4DFCE972C359380001ADF42 /* Utils.swift in Sources */,
-				D4DFCE8F2C358F70001ADF42 /* HomeRowView.swift in Sources */,
+				D4DFCE8F2C358F70001ADF42 /* TripsTableRowView.swift in Sources */,
 				D4DFCEA02C370F2E001ADF42 /* StopModel.swift in Sources */,
 				D4DFCE512C358C83001ADF42 /* SEATCodeTestApp.swift in Sources */,
 				D4DFCE7C2C358D58001ADF42 /* APIClient.swift in Sources */,

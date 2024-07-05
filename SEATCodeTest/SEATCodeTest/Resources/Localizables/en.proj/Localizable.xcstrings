@@ -1,8 +1,63 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Detail" : {
+    "chars_left_form_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$d / %2$d chars left"
+          }
+        }
+      }
+    },
+    "contact_form_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contact"
+          }
+        }
+      }
+    },
+    "D" : {
 
+    },
+    "date_form_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date"
+          }
+        }
+      }
+    },
+    "date_time_form_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date and time of the issue"
+          }
+        }
+      }
+    },
+    "destination_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Destination"
+          }
+        }
+      }
     },
     "driver" : {
       "extractionState" : "manual",
@@ -11,6 +66,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Driver: %@"
+          }
+        }
+      }
+    },
+    "email_form_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-mail (mandatory)"
           }
         }
       }
@@ -36,6 +102,50 @@
         }
       }
     },
+    "first_name_form_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "First name (mandatory)"
+          }
+        }
+      }
+    },
+    "issue_form_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Issue"
+          }
+        }
+      }
+    },
+    "last_name_form_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last name (mandatory)"
+          }
+        }
+      }
+    },
+    "line_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Line %d"
+          }
+        }
+      }
+    },
     "my_trips_title" : {
       "localizations" : {
         "en" : {
@@ -56,11 +166,130 @@
         }
       }
     },
-    "Schedule: %@ - %@" : {
+    "O" : {
+
+    },
+    "OK" : {
+
+    },
+    "origin_text" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
+            "value" : "Origin"
+          }
+        }
+      }
+    },
+    "person_form_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Person reporting the issue"
+          }
+        }
+      }
+    },
+    "phone_form_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telefone number (optional)"
+          }
+        }
+      }
+    },
+    "report_error_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error reporting issue"
+          }
+        }
+      }
+    },
+    "report_issue_form_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Report an Issue"
+          }
+        }
+      }
+    },
+    "report_success_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Issue reported!"
+          }
+        }
+      }
+    },
+    "S" : {
+
+    },
+    "save_form_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        }
+      }
+    },
+    "ticket_price_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ticket price: %@"
+          }
+        }
+      }
+    },
+    "time_form_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time"
+          }
+        }
+      }
+    },
+    "time_text" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time: %@"
+          }
+        }
+      }
+    },
+    "trip_schedule" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "Schedule: %1$@ - %2$@"
           }
         }

@@ -8,13 +8,7 @@
 import Foundation
 import CoreLocation
 import SwiftUI
-
-struct TripsModel {
-    let trips: [TripModel]
-    var selectedTrip: UUID?
-    
-    static let empty = TripsModel(trips: [], selectedTrip: nil)
-}
+import MapKit
 
 struct TripModel: Codable, Hashable {
     let driverName: String
@@ -49,7 +43,7 @@ struct TripModel: Codable, Hashable {
         let latitude: Double
         let longitude: Double
         
-        func value() -> CLLocationCoordinate2D {
+        func coordinate2D() -> CLLocationCoordinate2D {
             return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         }
         
@@ -118,4 +112,16 @@ struct TripModel: Codable, Hashable {
     }
     
     static let mock = TripModel(driverName: "Mock driver", route: "Mock route", startTime: .now, endTime: .now, description: "Mock description", origin: Location(address: "Mock origin address", point: Coordinates(latitude: 0.0, longitude: 0.0)), destination: Location(address: "Mock destination address", point: Coordinates(latitude: 0.0, longitude: 0.0)), stops: nil)
+    
+    func tripRegion() -> MKCoordinateRegion {
+        let originPoint = MKMapPoint(self.origin.point.coordinate2D())
+        let destinationPoint = MKMapPoint(self.destination.point.coordinate2D())
+        
+        let mapRect = MKMapRect(x: fmin(originPoint.x, destinationPoint.x), y: fmin(originPoint.y, destinationPoint.y), width: fabs(originPoint.x - destinationPoint.x), height: fabs(originPoint.y - destinationPoint.y))
+
+        var region = MKCoordinateRegion(mapRect)
+        region.span = MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)
+        return region
+       
+    }
 }

@@ -10,7 +10,7 @@ import Combine
 
 final class TripsViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
-    @Published private(set) var tripsResult: TripsModel = .empty
+    @Published private(set) var tripsResult: [TripModel] = []
     @Published private(set) var stopInfoResult: StopModel = .empty
     @Published var showLoadingIndicator: Bool = false
     @Published var showError: Bool = false
@@ -39,22 +39,16 @@ final class TripsViewModel: ObservableObject {
                     break
                 }
             } receiveValue: { [weak self ] response in
-                self?.tripsResult = TripsModel(trips: response, selectedTrip: nil)
+                self?.tripsResult = response
                 self?.showLoadingIndicator.toggle()
             }
             .store(in: &cancellables)
     }
     
-    func selectTrip(tripId: UUID) {
-        self.tripsResult.selectedTrip = tripId
-    }
-    
     func getStopInfo() {
-        showLoadingIndicator.toggle()
         guard let request = Utils.buildURLRequest(requestData: .stops) else {
             showError.toggle()
             errorMessage = NSLocalizedString("error_url_request", comment: "")
-            showLoadingIndicator.toggle()
             return
         }
         apiClient.fetchData(request: request, type: StopModel.self)
@@ -66,12 +60,10 @@ final class TripsViewModel: ObservableObject {
                 case .failure(let error):
                     self?.showError.toggle()
                     self?.errorMessage = error.localizedDescription
-                    self?.showLoadingIndicator.toggle()
                     break
                 }
             } receiveValue: { [weak self ] response in
                 self?.stopInfoResult = response
-                self?.showLoadingIndicator.toggle()
             }
             .store(in: &cancellables)
     }

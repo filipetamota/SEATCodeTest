@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct HomeRowView: View {
+struct TripsTableRowView: View {
     let tripResult: TripModel
     
     private let dateFormatter: DateFormatter = {
-            let formatter = DateFormatter()
-            formatter.dateStyle = .short
-            formatter.timeStyle = .short
-            return formatter
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        return formatter
     }()
     
     var body: some View {
@@ -29,7 +29,7 @@ struct HomeRowView: View {
             }
             Text(String.localizedStringWithFormat(NSLocalizedString("driver", comment: ""), tripResult.driverName))
                 .font(.footnote)
-            Text("Schedule: \(dateFormatter.string(from: tripResult.startTime)) - \(dateFormatter.string(from: tripResult.endTime))")
+            Text(String.localizedStringWithFormat(NSLocalizedString("trip_schedule", comment: ""), dateFormatter.string(from: tripResult.startTime), dateFormatter.string(from: tripResult.endTime)))
                 .font(.footnote)
         }
         .padding(.vertical, 8)
@@ -37,5 +37,5 @@ struct HomeRowView: View {
 }
 
 #Preview {
-    HomeRowView(tripResult: .mock)
+    TripsTableRowView(tripResult: .mock)
 }

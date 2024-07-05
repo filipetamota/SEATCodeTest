@@ -12,7 +12,8 @@ import CoreLocation
 struct StopModel: Codable, Hashable {
     let price: Double
     let address: String
-    let tripId: Double
+    let tripId: Int
+    let paid: Bool
     let stopTime: Date
     let point: Coordinates
     let userName: String
@@ -40,22 +41,24 @@ struct StopModel: Codable, Hashable {
         
         price = try container.decode(Double.self, forKey: .price)
         address = try container.decode(String.self, forKey: .address)
-        tripId = try container.decode(Double.self, forKey: .tripId)
+        tripId = try container.decode(Int.self, forKey: .tripId)
+        paid = try container.decode(Bool.self, forKey: .paid)
         stopTime = dateFormatter.date(from: try container.decode(String.self, forKey: .stopTime)) ?? .now
         point = try container.decode(Coordinates.self, forKey: .point)
         userName = try container.decode(String.self, forKey: .userName)
     }
     
-    init(price: Double, address: String, tripId: Double, stopTime: Date, point: Coordinates, userName: String) {
+    init(price: Double, address: String, tripId: Int, paid: Bool, stopTime: Date, point: Coordinates, userName: String) {
         self.price = price
         self.address = address
         self.tripId = tripId
+        self.paid = paid
         self.stopTime = stopTime
         self.point = point
         self.userName = userName
     }
     
-    static let mock = StopModel(price: 0.0, address: "Mock address", tripId: 1, stopTime: .now, point: Coordinates(latitude: 0.0, longitude: 0.0), userName: "Mock user")
+    static let mock = StopModel(price: 0.0, address: "Mock address", tripId: 1, paid: true, stopTime: .now, point: Coordinates(latitude: 0.0, longitude: 0.0), userName: "Mock user")
     
-    static let empty = StopModel(price: 0.0, address: "", tripId: 0, stopTime: .now, point: Coordinates(latitude: 0.0, longitude: 0.0), userName: "")
+    static let empty = StopModel(price: 0.0, address: "", tripId: 0, paid: false, stopTime: .now, point: Coordinates(latitude: 0.0, longitude: 0.0), userName: "")
 }
