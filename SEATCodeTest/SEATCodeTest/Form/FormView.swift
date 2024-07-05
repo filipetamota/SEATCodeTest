@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct FormView: View {
     @Environment(\.modelContext) private var context
@@ -73,7 +74,7 @@ struct FormView: View {
                         {
                             let issue = Issue(firstName: firstname, lastName: lastname, email: email, phone: phone, date: date, issueDescription: issueDescription)
                             context.insert(issue)
-                            badgeManager.increaseAlertBadge()
+                            badgeManager.setAlertBadge(number: getIssuesCount())
                             showSuccess.toggle()
                         } else {
                             showError.toggle()
@@ -92,6 +93,14 @@ struct FormView: View {
             }
         } message: {
             Text(NSLocalizedString("report_success_text", comment: ""))
+        }
+    }
+    
+    private func getIssuesCount() -> Int {
+        do {
+            return try context.fetchCount(FetchDescriptor<Issue>())
+        } catch {
+            return 0
         }
     }
 }

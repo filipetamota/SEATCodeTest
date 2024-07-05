@@ -25,14 +25,4 @@ actor AppAlertBadgeManager {
     func setAlertBadge(number: Int) {
         application.applicationIconBadgeNumber = number
     }
-    
-    @MainActor
-    func increaseAlertBadge() {
-        application.applicationIconBadgeNumber += 1
-    }
-    
-    @MainActor
-    func resetAlertBadgetNumber() {
-        application.applicationIconBadgeNumber = 0
-    }
 }
