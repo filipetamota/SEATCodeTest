@@ -40,9 +40,7 @@ struct FormView: View {
                     UIApplication.shared.endEditing()
                 }
                     .keyboardType(.emailAddress)
-                TextField(NSLocalizedString("phone_form_text", comment: ""), text: $phone) {
-                    UIApplication.shared.endEditing()
-                }
+                TextField(NSLocalizedString("phone_form_text", comment: ""), text: $phone) 
                     .keyboardType(.phonePad)
             }
             
@@ -92,12 +90,12 @@ struct FormView: View {
             }
         }
         .alert(NSLocalizedString("error", comment: ""), isPresented: $showError) {
-            Button("OK", role: .cancel) { }
+            Button(NSLocalizedString("ok_text", comment: ""), role: .cancel) { }
         } message: {
             Text(NSLocalizedString("report_error_text", comment: ""))
         }
         .alert(NSLocalizedString("issue_form_title", comment: ""), isPresented: $showSuccess) {
-            Button("OK", role: .cancel) {
+            Button(NSLocalizedString("ok_text", comment: ""), role: .cancel) {
                 dismiss()
             }
         } message: {

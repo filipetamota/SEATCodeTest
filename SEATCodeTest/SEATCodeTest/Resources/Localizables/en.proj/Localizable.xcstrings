@@ -169,8 +169,15 @@
     "O" : {
 
     },
-    "OK" : {
-
+    "ok_text" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
     },
     "origin_text" : {
       "extractionState" : "manual",
