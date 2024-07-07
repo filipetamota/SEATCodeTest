@@ -1,13 +1,13 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "chars_left_form_text" : {
+    "chars_form_text" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%1$d / %2$d chars left"
+            "value" : "%1$d / %2$d characters"
           }
         }
       }

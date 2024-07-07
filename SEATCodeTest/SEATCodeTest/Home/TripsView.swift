@@ -22,14 +22,20 @@ struct TripsView: View {
     var body: some View {
         VStack {
             mapView
+            Divider()
             ZStack {
                 LoadingIndicatorView()
                     .show(viewModel.showLoadingIndicator)
                 List() {
                     ForEach(viewModel.tripsResult, id: \.self) { tripResult in
                         Button(action: {
-                            self.selectedTrip = tripResult
-                            centerInLocation(region: tripResult.tripRegion())
+                            if self.selectedTrip == tripResult {
+                                selectedTrip = nil
+                                centerInLocation()
+                            } else {
+                                self.selectedTrip = tripResult
+                                centerInLocation(region: tripResult.tripRegion())
+                            }
                         }) {
                             TripsTableRowView(tripResult: tripResult)
                         }
@@ -55,14 +61,7 @@ struct TripsView: View {
                         Image(systemName: "exclamationmark.bubble")
                             .tint(Color.black)
                     }
-                }
-                ToolbarItemGroup(placement: .topBarLeading) {
-                    Image(systemName: "xmark.square")
-                        .tint(Color.black)
-                        .onTapGesture {
-                            selectedTrip = nil
-                            centerInLocation()
-                        }
+                    .accessibilityIdentifier("FormButton")
                 }
             }
             .toolbarBackground(.visible, for: .navigationBar)

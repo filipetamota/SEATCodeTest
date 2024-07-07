@@ -27,14 +27,22 @@ struct FormView: View {
     var body: some View {
         Form {
             Section(header: Text(NSLocalizedString("person_form_title", comment: ""))) {
-                TextField(NSLocalizedString("first_name_form_text", comment: ""), text: $firstname)
-                TextField(NSLocalizedString("last_name_form_text", comment: ""), text: $lastname)
+                TextField(NSLocalizedString("first_name_form_text", comment: ""), text: $firstname) {
+                    UIApplication.shared.endEditing()
+                }
+                TextField(NSLocalizedString("last_name_form_text", comment: ""), text: $lastname) {
+                    UIApplication.shared.endEditing()
+                }
             }
             
             Section(header: Text(NSLocalizedString("contact_form_title", comment: ""))) {
-                TextField(NSLocalizedString("email_form_text", comment: ""), text: $email)
+                TextField(NSLocalizedString("email_form_text", comment: ""), text: $email) {
+                    UIApplication.shared.endEditing()
+                }
                     .keyboardType(.emailAddress)
-                TextField(NSLocalizedString("phone_form_text", comment: ""), text: $phone)
+                TextField(NSLocalizedString("phone_form_text", comment: ""), text: $phone) {
+                    UIApplication.shared.endEditing()
+                }
                     .keyboardType(.phonePad)
             }
             
@@ -48,8 +56,9 @@ struct FormView: View {
             }
             
             Section(header: Text(NSLocalizedString("issue_form_title", comment: "")), footer:
-                        Text(String.localizedStringWithFormat(NSLocalizedString("chars_left_form_text", comment: ""), issueDescriptionTypedCharacters, issueDescriptionCharacterLimit)) ) {
+                        Text(String.localizedStringWithFormat(NSLocalizedString("chars_form_text", comment: ""), issueDescriptionTypedCharacters, issueDescriptionCharacterLimit)) ) {
                 TextEditor(text: $issueDescription)
+                    .accessibilityIdentifier("IssueTextEditor")
                     .frame(height: 200)
                     .onChange(of: issueDescription) {
                         issueDescriptionTypedCharacters = issueDescription.count
@@ -107,4 +116,10 @@ struct FormView: View {
 
 #Preview {
     FormView()
+}
+
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
 }
